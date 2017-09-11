@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/keypad"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_text" />
+
+            <AutoCompleteTextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/loginText"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:id="@+id/passwordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_text" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/passwordText"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:text=""
+                android:inputType="textPassword"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loginButton_text"
+                android:onClick="loginButtonClicked" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
